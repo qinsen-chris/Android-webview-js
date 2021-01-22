@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //自定义arr名称
+//    android.libraryVariants.all { variant ->
+//        variant.outputs.all {
+//            def fileName = "glib.aar"
+//            outputFileName = fileName
+//        }
+//    }
+
+    //自定义arr名称含版本号信息
+//    android.libraryVariants.all { variant ->
+//        variant.outputs.all { output ->
+//            def fileName = "glib_${defaultConfig.versionCode}-${defaultConfig.versionName}-${releaseTime()}.arr"
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.arr')) {
+//                //这里修改apk文件名
+//                outputFileName = fileName  //旧版为：output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+//    }
+}
+
+//获取编译时间
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //添加webkit包
+    //implementation 'androidx.webkit:webkit:1.2.0'
+    implementation 'org.apache.commons:commons-lang3:3.1'
+    implementation 'com.alibaba:fastjson:1.1.54.android'
+//    implementation 'com.eclipsesource.j2v8:j2v8_android:3.0.5'
+}

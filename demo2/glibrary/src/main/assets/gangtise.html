@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Android测试网页</title>
+
+<script type="text/javascript" src="./GCore.min.js" ></script>
+<script type="text/javascript" src="./androidjs.js" ></script>
+
+</head>
+
+<body>
+    <input name="btn" type="button" onClick="showToast()" value="点我提示" />
+
+    <input name="btn" type="button" onClick="tConect('jjj',16)" value="传参到JS" />
+    <input name="btn" type="button" onClick="requestHQ()" value="回调Android方法并传参" />
+
+    <input name="btn" type="button" onClick="websocket_request()" value="websocket" />
+    <input name="btn" type="button" onClick="http_request()" value="httpRequest" />
+</body>
+
+</html>

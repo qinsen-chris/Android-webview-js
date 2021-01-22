@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="getInfo"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="connect"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="disconnect"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取k线数据"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清空参数测试"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:id="@+id/keyWizard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="键盘精灵查询"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="键盘精灵"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="行情订阅数据"
+        android:textAllCaps="false"/>
+</LinearLayout>

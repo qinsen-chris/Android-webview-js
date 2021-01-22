@@ -1,0 +1,3 @@
+include ':glibrary'
+include ':app'
+rootProject.name = "demo2"
